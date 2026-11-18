@@ -1,6 +1,8 @@
 # HashBrown
 
-![HashBrown](docs/assets/HashBrown-Banner.png)
+![HashBrown](docs/assets/HashBrown-Banner.gif)
+
+[View the still banner](docs/assets/HashBrown-Banner.png)
 
 **HashBrown 0.3.0 tracks evidence files and their chain of custody.** Import existing disk or memory images into a case, verify their SHA-256 hashes and record custody events. See [offline prerequisites and safe validation](docs/prerequisites.md).
 
