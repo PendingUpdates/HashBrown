@@ -2,15 +2,11 @@
 
 ![HashBrown](docs/assets/HashBrown-Banner.png)
 
-[Offline prerequisites and safe validation](docs/prerequisites.md).
+**HashBrown 0.3.0 tracks evidence files and their chain of custody.** Import existing disk or memory images into a case, verify their SHA-256 hashes and record custody events. See [offline prerequisites and safe validation](docs/prerequisites.md).
 
-Local prototype: [generic offline evidence registration](docs/offline-evidence.md).
-This separate entrypoint handles existing files only; live disk/RAM commands below are not read-only.
+The separate [generic offline evidence registration](docs/offline-evidence.md) prototype hashes selected files and writes a manifest without copying them into a case.
 
-**HashBrown 0.3.0 is a standalone disk/RAM acquisition and evidence-tracking tool.**
-It creates its own cases, imports existing image files, schedules Windows capture
-through an existing Velociraptor server, downloads preserved uploads in resumable
-chunks, checks SHA-256, and records a hash-chained custody history.
+For live acquisition, HashBrown can schedule Windows capture through an existing Velociraptor server and resume downloads. These operations create collection jobs and write evidence. Native physical-disk and RAM capture still require qualification on the intended platform.
 
 Distribution: `hashbrown-ir`. Python package: `hashbrown_ir`. Command: `hashbrown`.
 It has no runtime Python dependencies and no shared engine, installer, case store,
